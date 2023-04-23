@@ -1,4 +1,7 @@
-﻿using ObserverPattern.Implementacoes;
+﻿using ObserverPattern.Enum;
+using ObserverPattern.Implementacoes;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ObserverPattern
 {
@@ -7,24 +10,34 @@ namespace ObserverPattern
     public class Nome : IObjetoObservado
     {
         private string _nome;
-        public IObjetoParaAtualizar objetosObservados;
+        public TipoAcao TipoAcao { get; set; }
+
+        public List<IObjetoParaAtualizar> objetosObservados;
 
         public string nome
         {
             get { return _nome; }
             set { _nome = value; NotificarMudancas(); }
         }
-        
+
+        public Nome()
+        {
+            objetosObservados = new List<IObjetoParaAtualizar>();
+        }
+
         //Necessário sempre Adicionar o Objeto que Precisa ser Notificado
         public void AdicionarObjetoParaSerNotificado(IObjetoParaAtualizar objetoParaObservar)
         {
-            objetosObservados = objetoParaObservar;
+            objetosObservados.Add(objetoParaObservar);
         }
 
         //Toda vez Que Este Objeto Sofrer uma Ação de "SET" ele Irá Notificar essa Mudança aos Objetos Interessados.
         public void NotificarMudancas()
         {
-            objetosObservados.AtualizarObjeto(this);
+            objetosObservados.ForEach(o =>
+            {
+                o.AtualizarObjeto(this, TipoAcao);
+            });
         }
 
     }

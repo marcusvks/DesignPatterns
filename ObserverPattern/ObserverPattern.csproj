@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\TipoAcao.cs" />
     <Compile Include="Implementacoes\ListaDoComponente.cs" />
+    <Compile Include="Implementacoes\TextBoxNomeTempoReal.cs" />
     <Compile Include="ObserverPattern.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,4 +1,5 @@
-﻿using ObserverPattern.Implementacoes;
+﻿using ObserverPattern.Enum;
+using ObserverPattern.Implementacoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace ObserverPattern
 {
     public interface IObjetoParaAtualizar
     {
-        void AtualizarObjeto(IObjetoObservado objeto);
+        void AtualizarObjeto(IObjetoObservado objeto, TipoAcao tipoAcao);
 
     }
 }

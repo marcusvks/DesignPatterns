@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using ObserverPattern.Enum;
+using System.Windows.Forms;
 
 namespace ObserverPattern.Implementacoes
 {
@@ -11,9 +12,9 @@ namespace ObserverPattern.Implementacoes
         public ListaDoComponente(ListBox listComponente)
         => (_listComponente) = (listComponente);
 
-        public void AtualizarObjeto(IObjetoObservado objeto)
+        public void AtualizarObjeto(IObjetoObservado objeto, TipoAcao TipoAcao)
         {
-            if (objeto is Nome classeNome)
+            if (objeto is Nome classeNome && TipoAcao == TipoAcao.AcaoSalvar)
             {
                 _listComponente.Items.Add(classeNome.nome);
             }
