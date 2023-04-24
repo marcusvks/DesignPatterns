@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObserverPattern
+namespace ObserverPattern.Interfaces
 {
     public interface IObjetoParaAtualizar
     {

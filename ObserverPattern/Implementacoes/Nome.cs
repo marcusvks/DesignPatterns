@@ -3,7 +3,7 @@ using ObserverPattern.Implementacoes;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ObserverPattern
+namespace ObserverPattern.Implementacoes
 {
     //Entenda esta classe como:
     //"Objeto Que Sofrerá Mudança e Que Precisa Notificar Outro Objeto Para Aquele Realizar Alguma Ação"
