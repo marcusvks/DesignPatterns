@@ -119,7 +119,7 @@
             this.Controls.Add(this.tbStringConexao);
             this.Name = "FactoryMethodPattern";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "FactoryMethodPattern";
             this.ResumeLayout(false);
             this.PerformLayout();
 
