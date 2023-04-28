@@ -1,4 +1,5 @@
 ﻿using ObserverPattern.Enum;
+using ObserverPattern.Interfaces;
 using System.Windows.Forms;
 
 namespace ObserverPattern.Implementacoes

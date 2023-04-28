@@ -1,7 +1,6 @@
 ﻿using ObserverPattern.Enum;
-using ObserverPattern.Implementacoes;
+using ObserverPattern.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace ObserverPattern.Implementacoes
 {
