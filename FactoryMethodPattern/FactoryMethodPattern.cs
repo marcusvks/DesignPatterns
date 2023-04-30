@@ -21,8 +21,8 @@ namespace FactoryMethodPattern
             {
 
                 Connection coneccao = DatabaseFactory.SelecionarBancoDeDados(_bancoSelecionado) //Passa o Banco de Dados que Deseja
-                               .CriarConexao(tbStringConexao.Text) //Passa a String de Conexao do Banco de Dados
-                               .Conectar(); //Se conectara ao BD Selecionado
+                                                     .CriarConexao(tbStringConexao.Text) //Passa a String de Conexao do Banco de Dados
+                                                     .Conectar(); //Se conectara ao BD Selecionado
 
                 coneccao.ExecuteCommand("Comando de Teste");
                 coneccao.Close();

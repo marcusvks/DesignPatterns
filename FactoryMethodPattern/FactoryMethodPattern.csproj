@@ -56,6 +56,7 @@
     <Compile Include="B-FabricasBancoDeDados\MySql\MySqlFactory.cs" />
     <Compile Include="B-FabricasBancoDeDados\Oracle\OracleFactory.cs" />
     <Compile Include="B-FabricasBancoDeDados\SqlServer\SqlFactory.cs" />
+    <Compile Include="Extensoes\DatabaseTypeExtentions.cs" />
     <Compile Include="FactoryMethodPattern.cs">
       <SubType>Form</SubType>
     </Compile>

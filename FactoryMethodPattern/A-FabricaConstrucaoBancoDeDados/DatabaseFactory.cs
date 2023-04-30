@@ -1,5 +1,6 @@
 ﻿using FactoryMethodPattern.Conectores;
 using FactoryMethodPattern.Enums;
+using FactoryMethodPattern.Extensoes;
 using FactoryMethodPattern.Fabricas;
 using System;
 
@@ -13,15 +14,8 @@ namespace FactoryMethodPattern.A_FabricaConstrucaoDatabases
 
         //2 - Vai ser Criado uma Instancia do Banco de Dados Passado
         public static DatabaseFactory SelecionarBancoDeDados(DatabaseTypes dataBase)
-        {           
-            if (dataBase == DatabaseTypes.SqlServer)
-                return new SqlFactory();
-            if (dataBase == DatabaseTypes.Oracle)
-                return new OracleFactory();
-            if (dataBase == DatabaseTypes.MySql)
-                return new MySqlFactory();
-
-            throw new ApplicationException("Banco de dados não reconhecido.");
+        {
+            return dataBase.SelectDatabase();
         }
     }
 }
